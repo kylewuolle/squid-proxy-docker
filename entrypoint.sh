@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo -e "password" | htpasswd -i -c /etc/squid/passwd user01
+
 set -e
 
 create_log_dir() {
@@ -35,3 +38,4 @@ if [[ -z ${1} ]]; then
 else
   exec "$@"
 fi
+
